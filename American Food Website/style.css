@@ -42,16 +42,16 @@ h6 {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 button {
     font-size: 0.8rem;
     font-weight: 700;
     outline: none;
-    border: none;
-    background-color: #1d1d1d;
-    color: aliceblue;
+    border: 1px;
+    background-color: orange;
+    color: black;
     padding: 13px 30px;
     text-transform: uppercase;
     cursor: pointer;
@@ -59,7 +59,11 @@ button {
 }
 
 button:hover {
-    background-color: #3a3833;
+    opacity: 0.8;
+}
+
+body {
+    padding-bottom: 1000px;
 }
 
 
@@ -68,10 +72,12 @@ button:hover {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 900;
-    background-color: wheat;
+    background-color: #FCF5E5;
     border-bottom: 1px solid;
     border-bottom-color: black;
     box-shadow: 0px 5px  10px rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
 }
 
 .nav-light .navbar-nav .nav-link{
@@ -85,11 +91,11 @@ button:hover {
 .nav-light .navbar-nav .nav-link:hover,
 .nav-light .navbar-nav .nav-link.active
 {
-    color: #FF6347;
+    color: coral;
 }
 
 .navbar i.active, .navbar i:hover {
-    color:white;
+    color: coral;
 }
 
 .navbar i {
@@ -127,9 +133,29 @@ button:hover {
 /*Navigation End */
 
 #home {
-    bac
+    background-image: url(background_picture/background1.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 120px;
 }
 
+.ordernowbutton {
+    border-radius: 20px;
+}
+
+.header5home, .header1home {
+    color: whitesmoke;
+}
+
+.phome {
+    color: aqua;
+}
 #home span {
-    color: coral;
+    color: gold;
+  
 }
