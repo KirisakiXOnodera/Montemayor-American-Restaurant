@@ -62,9 +62,7 @@ button:hover {
     opacity: 0.8;
 }
 
-body {
-    padding-bottom: 1000px;
-}
+
 
 
 /* Navigation */
@@ -133,7 +131,7 @@ body {
 /*Navigation End */
 
 #home {
-    background-image: url(background_picture/background1.jpg);
+    background-image: url(background_picture/background5.jpg);
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -141,19 +139,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 120px;
+    background-position: top 70px center;
 }
 
 .ordernowbutton {
     border-radius: 20px;
 }
 
-.header5home, .header1home {
-    color: whitesmoke;
+.header5home {
+    color: white;
+}
+
+.header1home {
+    color: black;
 }
 
 .phome {
-    color: aqua;
+    color: black;
 }
 #home span {
     color: gold;
