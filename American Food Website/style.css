@@ -1,116 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.head1 {
-    font-size: 400px;
+.header1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10rem;
+    font-weight: 700;
 }
 
 h2 {
+    font-family: 'Fascinate', cursive;
     font-size: 1.8rem;
     font-weight: 600;
 }
 
 h3 {
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     font-weight: 800;
 }
 
 h4 {
+    font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 h5 {
-    font-size: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     font-weight: 400;
     color: #1d1d1d;
 }
 
 h6 {
-    color: #D6D6D6;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
-.navbar{
-    font-size: 20px;
-    background-color: #5CDB95;
+
+/* Navigation */
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    background-color: wheat;
     border-bottom: 1px solid;
     border-bottom-color: black;
     box-shadow: 0px 5px  10px rgba(0,0,0,0.3);
 }
 
-.navbar-light .navbar-nav .nav-link{
+.nav-light .navbar-nav .nav-link{
     padding: 0 20px;
+    margin-right: 20px;
     color: #05386B;
     transition: 0.3s ease;
-    font-weight: bold;
-}
-.nav-link{
-    margin-right:60px;
-    align-items: center;
-    margin-top: 10px;
+    text-transform: uppercase;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-    
-    color: #EDF5E1;
-    background-color: #05386B;
-    border-radius: 3px;
-
+.nav-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.nav-light .navbar-nav .nav-link.active,
+.navbar i.active{
+    color: orangered;
 }
 
-.navbar i:hover {
-    color: white;
-}
-
-
-.navbar-light .navbar-nav .nav-link.active, .navbar i.active {
-    color: white;
-}
-
-.navbar i{
-    font-size: 2.5rem;
+.navbar i {
+    font-size: 2rem;
     padding: 0 7px;
     cursor: pointer;
-    font-weight: 500;
-    transition: 0.3 ease;
-}
-
-.cart-icon {
-    margin-left: 30px;
-    width: 40px;
-    margin-bottom: 20px;
+    transition: 0.3s ease;
 }
 
 .cart-counter-container {
     position: relative;
+    margin-left: 20px;
 }
 
 .cart-counter {
     background-color: red;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 5px;
     position: absolute;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 2px;
     border-radius: 20px;
-    bottom: 0.3cm;
-    right: -0.2cm;
-
+    bottom: 0;
+    right: 0;
 }
-
 
 .logo {
-    height: 100px;
+    height: 90px;
+    cursor: pointer;
 }
+
+/*Navigation End */
