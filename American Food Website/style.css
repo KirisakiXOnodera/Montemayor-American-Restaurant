@@ -16,7 +16,7 @@ h2 {
     font-weight: 600;
 }
 
-h3 {
+.header3 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     font-weight: 800;
@@ -40,29 +40,10 @@ h6 {
     color: white;
 }
 
-p {
+.pdesign {
+    font-size: 8px;
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
 }
-
-button {
-    font-size: 0.8rem;
-    font-weight: 700;
-    outline: none;
-    border: 1px;
-    background-color: orange;
-    color: black;
-    padding: 13px 30px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-
 
 
 /* Navigation */
@@ -70,7 +51,7 @@ button:hover {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 900;
-    background: rgba(255,253,208,0.8);
+    background: rgb(255,253,208);
     border-bottom: 1px solid;
     border-bottom-color: black;
     box-shadow: 0px 5px  10px rgba(0,0,0,0.3);
@@ -131,9 +112,41 @@ button:hover {
 /*Navigation End */
 
 /* HOME*/
-section{
-    padding:2rem 9%;
-  }
+.home .content a{
+    display: inline-block;
+    border: 0.2rem solid;
+    padding:.8rem 3rem;
+    border-color: red;
+    color: red;
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+}
+
+.home .content a::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: red;
+    transition: 0.3s linear;
+    z-index: -1;
+}
+
+.home .content a:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.home .content a:hover{
+    color: white;
+}
+
 
   .home{
     display: flex;
@@ -144,6 +157,7 @@ section{
     background:url(background_picture/home-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 2rem 9%;
   }
   
   .home .content{
@@ -170,16 +184,16 @@ section{
     }
   }
   
-  .home .content h3{
-    font-size: 5rem;
-    color:#333;
-  }
-  
   .home .content p{
-    font-size: 1.7rem;
-    color:#666;
-    padding:1rem 0;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
   }
+
+
+  .home .content h1 span {
+    color: gold; 
+}
+
 /* HOME END*/
 
 /* login */
@@ -266,3 +280,170 @@ section{
 }
 
 /* end of login */
+
+
+/* Specialty */
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+    padding:1rem;
+    color:#666;
+  }
+  
+  .heading span{
+    color:red;
+  }
+
+  .speciality {
+    padding: 2rem 9%;
+  }
+
+  .speciality .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+  }
+  
+  .speciality .box-container .box{
+    flex:1 1 40rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border:.1rem solid rgba(0,0,0,.3);
+    cursor: pointer;
+    border-radius: .5rem;
+  }
+
+  .speciality .box-container .box .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:-100%; left:0;
+  }
+  
+  .speciality .box-container .box .content{
+    text-align: center;
+    background:#fff;
+    padding:2rem;
+  }
+  
+  .speciality .box-container .box .content img{
+    margin:1.5rem 0;
+  }
+  
+  .speciality .box-container .box .content h3{
+    font-size: 2.5rem;
+    color:#333;
+  }
+  
+  .speciality .box-container .box .content p{
+    font-size: 1.6rem;
+    color:#666;
+    padding:1rem 0;
+  }
+  
+  .speciality .box-container .box:hover .image{
+    top:0;
+    transition: 0.5s ease;
+  }
+  
+  .speciality .box-container .box:hover .content{
+    transform: translateY(100%);
+  }
+  
+/* End of Specialty*/
+
+/* Step*/
+
+.step-container {
+    padding: 2rem 9%;
+}
+
+.steps{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding:1rem;
+  }
+  
+  .steps .box{
+    flex:1 1 12rem;
+    padding:1rem;
+    text-align: center;
+  }
+  
+  .steps .box img{
+    border-radius: 50%;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  }
+  
+  .steps .box h3{
+    font-size: 3rem;
+    color:#333;
+    padding:1rem;
+  }
+/* End of Step */
+
+/*Review */
+
+.review {
+    padding: 2rem 9%;
+}
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+  }
+  
+  .review .box-container .box{
+    text-align: center;
+    padding:2rem;
+    border:1rem solid red;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    border-radius: .5rem;
+    flex:1 1 20em;
+    background:#333;
+    margin-top: 6rem;
+  }
+  
+  .review .box-container .box img{
+    height: 12rem;
+    width:12rem;
+    border-radius: 50%;
+    border:1rem solid #fff;
+    margin-top: -8rem;
+    object-fit: cover;
+  }
+  
+  .review .box-container .box h3{
+    font-size: 2.5rem;
+    color:#fff;
+    padding:.5rem 0;
+  }
+  
+  .review .box-container .box .stars i{
+    font-size: 2rem;
+    color: gold;
+    padding:.5rem 0;
+  }
+  
+  .review .box-container .box p{
+    font-size: 1.5rem;
+    color:#eee;
+    padding:1rem 0;
+  }
+/*End of Review */
+
+/* Footer */
+  .logofooter {
+    width: 80px;
+    margin-left: 100px;
+  }
+
+  .margin {
+    margin-top: 200px;
+  }
+
+/* End of Footer */
