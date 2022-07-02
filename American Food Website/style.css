@@ -35,13 +35,13 @@ h4 {
     color: #1d1d1d;
 }
 
-h6 {
+.head6 {
     font-family: 'Roboto', sans-serif;
     color: white;
 }
 
 .pdesign {
-    font-size: 8px;
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -51,7 +51,8 @@ h6 {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 900;
-    background: rgb(255,253,208);
+    background: white;
+    /*rgb(255,253,208) */
     border-bottom: 1px solid;
     border-bottom-color: black;
     box-shadow: 0px 5px  10px rgba(0,0,0,0.3);
@@ -112,6 +113,9 @@ h6 {
 /*Navigation End */
 
 /* HOME*/
+.home {
+  margin-top: 50px;
+}
 .home .content a{
     display: inline-block;
     border: 0.2rem solid;
@@ -172,7 +176,7 @@ h6 {
   .home .image img{
     width:100%;
     padding:1rem;
-    animation:float 3s linear infinite;
+    animation:float 2.5s linear infinite;
   }
   
   @keyframes float{
@@ -291,7 +295,7 @@ h6 {
   }
   
   .heading span{
-    color:red;
+    color:gold;
   }
 
   .speciality {
@@ -351,6 +355,10 @@ h6 {
   .speciality .box-container .box:hover .content{
     transform: translateY(100%);
   }
+
+  .invisible-text {
+    color: white;
+  }
   
 /* End of Specialty*/
 
@@ -400,11 +408,11 @@ h6 {
   .review .box-container .box{
     text-align: center;
     padding:2rem;
-    border:1rem solid red;
+    border:1rem solid #FDFD96;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
     border-radius: .5rem;
     flex:1 1 20em;
-    background:#333;
+    background:#1d0002;
     margin-top: 6rem;
   }
   
@@ -425,7 +433,7 @@ h6 {
   
   .review .box-container .box .stars i{
     font-size: 2rem;
-    color: gold;
+    color: yellow;
     padding:.5rem 0;
   }
   
@@ -438,8 +446,8 @@ h6 {
 
 /* Footer */
   .logofooter {
-    width: 80px;
-    margin-left: 100px;
+    width: 300px;
+    padding-right: 75px;
   }
 
   .margin {

@@ -46,8 +46,6 @@ h6 {
     font-family: 'Roboto', sans-serif;
 }
 
-
-
 /* Navigation */
 .navbar {
     font-family: 'Roboto', sans-serif;
@@ -113,137 +111,124 @@ h6 {
 
 /*Navigation End */
 
-.contact {
-    position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
+/* Blog */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#blog {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 60px;
-    background: url(background_picture/background3.jpg);
-    background-size: cover;
-}
-
-.contact .content {
-    max-width: 800px;
-    text-align: center;
-}
-
-.contact .content h2 {
-    font-size: 36px;
-    font-weight: 500;
-    color: white;
-}
-
-.contact .content p {
-    font-weight: 300;
-    font-size: 20px;
-    color: white;
-}
-
-.container1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.container1 .contactinfo {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-
-.container1 .contactinfo .box {
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-
-.container1 .contactinfo .box .icon {
-    min-width: 60px;
-    height: 60px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 22px;
-}
-
-.container1 .contactinfo .box .text {
-    display: flex;
-    margin-left: 20px;
-    font-size: 16px;
-    color: #fff;
-    flex-direction: column;
-    font-weight: 300;
-}
-
-.container1 .contactinfo .box .text h3 {
-    font-weight: 500;
-    color: gold;
-}
-
-.contactform {
-    width: 40%;
+    align-content: center;
     padding: 40px;
-    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    flex-direction: column;
+    margin-top: 150px;
+    background:url(background_picture/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.contactform h2 {
-    font-size: 30px;
-    color: #333;
-    font-weight: 500px;
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.contactform .inputbox {
-    position: relative;
+.blog-heading span {
+    color: red;
+}
+
+.blog-heading h3 {
+    font-size: 2.4rem;
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.blog-box {
+    width: 350px;
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    margin: 20px;
+}
+
+.blog-img img {
     width: 100%;
-    margin-top: 10px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.contactform .inputbox input, .contactform .inputbox textarea {
-    width: 100%;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    border: none;
-    border-bottom: 2px solid #333;
-    outline: none;
-    resize: none;
+.blog-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-.contactform .inputbox span {
-    position: absolute;
-    left: 0;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    pointer-events: none;
-    transition: 0.5s ease;
-    color: #666;
+.blog-text span {
+    column-rule: #f33c3c;
+    font-size: 0.9rem;
 }
 
-.contactform .inputbox input:focus ~ span, .contactform .inputbox input:valid ~ span,
-.contactform .inputbox textarea:focus ~ span, .contactform .inputbox textarea:valid ~ span{
-    color: #e91e63;
-    font-size: 12px;
-    transform: translateY(-20px);
+.blog-text .blog-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #272727;
+    text-decoration: none;
 }
 
-.contactform .inputbox input[type="submit"] {
-    width: 100%;
-    background: #00bcd4;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
+.blog-text .blog-title:hover {
+    color: #f33c3c;
+    transition: all ease 0.3s;
 }
+
+.blog-text p {
+    color: #9b9b9b;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+.blog-title a {
+    color: #0f0f0f;
+}
+
+.blog-text .blog-extension {
+    text-decoration: none;
+    color: black;
+}
+
+
+.blog-box a:hover {
+    color: #f33c3c;
+    transition: all ease 0.3s;
+}
+/* Blog End*/
 
 .logofooter {
     width: 300px;
@@ -276,3 +261,25 @@ h6 {
       }
 }
 
+@media(max-width: 1250px) {
+    .blog-box {
+        width: 300px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .blog-box {
+        width: 70%;
+    }
+}
+
+@media(max-width: 550px) {
+    .blog-box {
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    #blog {
+        padding: 20px;
+    }
+}
