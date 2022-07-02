@@ -46,19 +46,18 @@ h6 {
     font-family: 'Roboto', sans-serif;
 }
 
-
-
 /* Navigation */
 .navbar {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 900;
-    background: rgb(255,253,208);
+    background: white;
     border-bottom: 1px solid;
     border-bottom-color: black;
     box-shadow: 0px 5px  10px rgba(0,0,0,0.3);
     top: 0;
     left: 0;
+    opacity: 0;
 }
 
 .nav-light .navbar-nav .nav-link{
@@ -112,4 +111,10 @@ h6 {
 }
 
 /*Navigation End */
+
+
+/*About*/
+
+
+/*About end*/
 
