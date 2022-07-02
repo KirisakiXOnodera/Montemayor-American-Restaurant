@@ -112,6 +112,13 @@ h6 {
 /*Navigation End */
 
 /*About*/
+
+body {
+    background-image: url(background_picture/background6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 #about1 {
     display: flex;
     justify-content: center;
@@ -119,10 +126,7 @@ h6 {
     padding: 40px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     flex-direction: column;
-    margin-top: 150px;
-    background:url(background_picture/home-bg.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+    margin-top: 125px;
 }
 
 .about1-heading {
@@ -145,9 +149,6 @@ h6 {
 .person1-about{
 	width: 100%;
 	padding: 100px 0px;
-    background:url(background_picture/home-bg.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .main{
@@ -191,53 +192,35 @@ h6 {
 	margin-bottom: 45px;
 }
 
-.person2-about img{
-	height: 600px;
-	width: 400px;
-    border: 2px solid black;
-}
-
-.person2-about-text{
-	width: 550px;
-}
-
-.person2-about-text h2{
-	color: black;
-	text-transform: capitalize;
-	margin-bottom: 20px;
-    font-size: 55px;
-}
-.person2-about-text h5{
-	color: black;
-	letter-spacing: 2px;
-	font-size: 22px;
-	margin-bottom: 25px;
-	text-transform: capitalize;
-}
-.person2-about-text p{
-	color: black;
-	letter-spacing: 1px;
-	line-height: 28px;
-	font-size: 18px;
-	margin-bottom: 45px;
-}
-
-
-button{
-	background-color:#f9004d;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 13px 30px;
-	border-radius: 30px;
-	transition: .4s; 
-}
-button:hover{
-	background-color: transparent;
-	border: 2px solid #f9004d;
-	cursor: pointer;
-}
-
 /*About end*/
 
+.logofooter {
+    width: 300px;
+    padding-right: 75px;
+  }
+
+
+@media (max-width: 991px) {
+    .contact {
+        margin-top: 100px;
+        padding: 50px;
+    }
+
+    .container1 {
+        flex-direction: column;
+    }
+
+    .container .contactinfo {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .contactform {
+        width: 100%;
+    }
+
+    .logofooter {
+        width: 250px;
+        margin-right: 50px;
+      }
+}
