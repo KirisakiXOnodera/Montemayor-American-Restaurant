@@ -86,7 +86,6 @@ h6 {
 
 .cart-counter-container {
     position: relative;
-    margin-left: 20px;
 }
 
 .cart-counter {
@@ -108,6 +107,37 @@ h6 {
     height: 90px;
     cursor: pointer;
 }
+
+/* Mobile Nav  */
+.navbar-light, .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  #bar {
+    font-size: 1.5rem;
+    padding: 7px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: black;
+  }
+  
+  #bar:hover, #bar:active {
+    color: coral;
+  }
+  
+  @media only screen and (max-width: 991px) {
+    #navbarSupportedContent > ul {
+      margin: 1rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #navbarSupportedContent > ul > li:nth-child(n) > a {
+      padding: 10px 0;
+    }
+  }
 
 /*Navigation End */
 
@@ -198,26 +228,9 @@ body {
 
 
 @media (max-width: 991px) {
-    .contact {
-        margin-top: 100px;
-        padding: 50px;
-    }
-
-    .container1 {
-        flex-direction: column;
-    }
-
-    .container .contactinfo {
-        margin-bottom: 40px;
-        width: 100%;
-    }
-
-    .contactform {
-        width: 100%;
-    }
 
     .logofooter {
         width: 250px;
-        margin-right: 50px;
+        margin-left: 70px;
       }
 }
