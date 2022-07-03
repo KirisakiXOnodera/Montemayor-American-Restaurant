@@ -111,85 +111,127 @@ h6 {
 
 /*Navigation End */
 
-/*About*/
 
-body {
-    background-image: url(background_picture/background6.jpg);
-    background-size: cover;
-    background-position: center;
-}
+/* Menu */
 
-#about1 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 40px;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    flex-direction: column;
-    margin-top: 125px;
-}
-
-.about1-heading {
+.menu-heading {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 160px;
 }
 
-
-.about1-heading h3 {
-    font-size: 2.4rem;
-    color: #2b2b2b;
+.menu-heading h1 {
+    color: black;
     font-weight: 600;
+    font-size: 2.4rem;
 }
 
-.person1-about{
-	width: 100%;
-	padding: 100px 0px;
+.menu-heading h3 {
+    color: red;
 }
 
-.main{
-	width: 1130px;
-	max-width: 95%;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-    
+
+.menu{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+    margin-top: 50px;
 }
 
-.person1-about img{
-	height: 500px;
-	width: 400px;
-    border: 2px solid black;
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 0 20px;
+    margin-bottom: 50px;
 }
 
-.person1-about-text{
-	width: 550px;
+.food-items:hover {
+    box-shadow: -5px 32px 54px -21px rgba(0,0,0,0.63);
+    -webkit-box-shadow: -5px 32px 54px -21px rgba(0,0,0,0.63);
+    -moz-box-shadow: -5px 32px 54px -21px rgba(0,0,0,0.63);
 }
 
-.person1-about-text h2{
-	color: black;
-	text-transform: capitalize;
-	margin-bottom: 20px;
-    font-size: 55px;
-}
-.person1-about-text h5{
-	color: black;
-	letter-spacing: 2px;
-	font-size: 22px;
-	margin-bottom: 25px;
-	text-transform: capitalize;
-}
-.person1-about-text p{
-	color: black;
-	letter-spacing: 1px;
-	line-height: 28px;
-	font-size: 18px;
-	margin-bottom: 45px;
+.food-items img{
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
 }
 
-/*About end*/
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    grid-row-gap: 15px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+}
+.price{
+    text-align: right;
+}
+.details>p{
+    color: #6f6f6f;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+
+menu-button {
+    display: grid;
+    grid-template-columns: auto 1fr 50px;
+}
+
+.order {
+    background-color: #cb202d;
+    padding: 13px 13px 13px 13px;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 110px;
+}
+
+.add-cart{
+    background-color:#FCF5E5;
+    padding: 10px 10px 10px 10px;
+    border: none;
+    color: red;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 140px;
+    border: 3px solid red;
+    transition: 0.3s ease;
+}
+
+.order:hover {
+    opacity: 0.8;
+}
+
+.add-cart:hover {
+    background-color: white;
+}
+
+/* Menu End */
+
+.margin {
+    margin-top: 100px;
+}
 
 .logofooter {
     width: 300px;
@@ -221,3 +263,4 @@ body {
         margin-right: 50px;
       }
 }
+
