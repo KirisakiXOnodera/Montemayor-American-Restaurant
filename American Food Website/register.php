@@ -1,34 +1,74 @@
+<?php
+    include 'config.php';
+
+    if(isset($_POST['submit'])){
+        
+        $name = $_POST['name'];
+        $name = filter_var($name, FILTER_SANITIZE_STRING);
+        $email = $_POST['email'];
+        $email = filter_var($email, FILTER_SANITIZE_STRING);
+        $pass = $_POST['pass'];
+        $pass = filter_var($pass, FILTER_SANITIZE_STRING);
+        $cpass = $_POST['cpass'];
+        $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
+
+        
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon/logo.png" type="image/x-icon">
-    <title>Dominique</title>
+    <title>Register</title>
 
+    
+    <link rel="stylesheet" href="components.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="components.css">
-
 </head>
 <body>
-    
-    <section class="font-container">
+
+
+<section class="form-holder">
+    <section class="form-container">
 
         <form action="" enctype="multipart/form-data" method="POST">
             <h3>REGISTER NOW</h3>
-            <input type="text" name="name" class="box" placeholder="Name" required>
-            <input type="email" name="email" class="box" placeholder="Email" required>
-            <input type="password" name="password" class="box" placeholder="Password" required>
-            <input type="password" name="password" class="box" placeholder=" Confirm Password" required>
+            <div class="inputbox">
+            <input type="text" name="name" required>
+            <span>Name</span>
+            </div>
+
+            <div class="inputbox">
+            <input type="email" name="email" required>
+            <span>Email</span>
+            </div>
+
+            <div class="inputbox">
+            <input type="password" name="pass" required>
+            <span>Password</span>
+            </div>
+
+            <div class="inputbox">
+            <input type="password" name="cpass" required>
+            <span>Confirm Password</span>
+            </div>
+
             <input type="file" name="image" class="box" required accept="image/png, image/jpg, image/jpeg">
+            <input type="submit" value="register now" class="btn" name="submit">
+            <p>Already have an account? <a href="login.php">login now</a></p>
         </form>
 
-
     </section>
+    
+</section>
 
 
 
