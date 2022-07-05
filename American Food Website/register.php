@@ -7,12 +7,39 @@
         $name = filter_var($name, FILTER_SANITIZE_STRING);
         $email = $_POST['email'];
         $email = filter_var($email, FILTER_SANITIZE_STRING);
-        $pass = $_POST['pass'];
+        $pass = md5($_POST['pass']);
         $pass = filter_var($pass, FILTER_SANITIZE_STRING);
-        $cpass = $_POST['cpass'];
+        $cpass = md5($_POST['cpass']);
         $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
 
-        
+        $image = $_FILES['image']['name'];
+        $image_size = $_FILES['image']['size'];
+        $image_tmp_name = $_FILES['image']['tmp_name'];
+        $image_folder = 'uploaded_img/'.$image;
+
+        $select = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
+        $select->execute([$email]);
+
+        if($select->rowCount() > 0){
+            $message[] = 'User email already exist!';
+        }else{
+            if($pass != $cpass){
+                $message[] = 'Confirm password not match!';
+            }else{
+                $insert = $conn->prepare("INSERT INTO `users`(name, email, password, image) VALUES(?,?,?,?)");
+                $insert->execute([$name, $email ,$pass, $image]);
+
+                if($insert){
+                    if($image_size > 2000000){
+                        $message[] = 'Image size is too large!';
+                    }else{
+                        move_uploaded_file($image_tmp_name, $image_folder);
+                        $message[] = 'Registration success!';
+                        header('location:login.php');
+                    }
+                }
+            }
+        }
 
     }
 ?>
@@ -34,6 +61,23 @@
 
 </head>
 <body>
+
+
+<?php
+if(isset($message)){
+    foreach($message as $message){
+        echo '
+        <div class="message">
+            <span>'.$message.'</span>
+            <i class="fa-solid fa-circle-xmark" onclick="this.parentElement.remove();"></i>
+        </div>
+        ';
+
+    }
+}
+
+
+?>
 
 
 <section class="form-holder">

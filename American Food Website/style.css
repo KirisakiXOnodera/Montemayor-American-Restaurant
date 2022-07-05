@@ -84,6 +84,28 @@ h4 {
     transition: 0.3s ease;
 }
 
+.fav-counter-container {
+  position: relative;
+}
+
+.fav-counter-container span {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  position: absolute;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 20px;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+
 .cart-counter-container {
     position: relative;
 }
@@ -107,6 +129,7 @@ h4 {
     height: 90px;
     cursor: pointer;
 }
+
 
 /* Mobile Nav  */
 .navbar-light, .navbar-toggler {
@@ -229,93 +252,10 @@ h4 {
 
 /* HOME END*/
 
-/* login */
-.h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.body{
-    font-family: 'Roboto', sans-serif;
-    color: black;
-}
-
-.body .h1{
-    text-align: center;
-    margin: -50px 10px 20px;
-}
-
-.body .form-element{
-    margin: 10px 0px;
-}
-
-.body .form-element label{
-    font-size: 16px;
-    font-weight: 800;
-    padding-top: 10px;
-    padding-right: 10px;
-}
-
-.body .form-element input[type ="text"],
-.body .form-element input[type="password"]{
-    margin-top: 3px;
-    font-weight: 500;
-    width: 150;
-    outline: none;
-    border: 1px solid black;
-    border-radius: 0px;
-}
-
-.body .form-element button{
-
-    font-size: 1rem;
-    font-weight: 1000;
-    outline: none;
-    border: 1px;
-    background-color: white;
-    color: black;
-    padding: 13px 36px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s ease;
-
-}
-
-.popup{
-    position: absolute;
-    top: 290px;
-    right: -180px;
-    transform: translate(-50%, -50%);
-    width: 380px;
-    height: 330px;
-    padding: 10px 50px;
-    background: rgba(255,253,208,0.5);
-    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.popup .close-button{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 15px;
-    height: 15px;
-    background: #888;
-    color: #eee;
-    text-align: center;
-    line-height: 15px;
-    border-radius: 15px;
-    cursor: pointer;
-
-}
-
-/* end of login */
-
 
 /* Specialty */
+
+
 .heading{
     text-align: center;
     font-size: 3.5rem;
@@ -324,7 +264,7 @@ h4 {
   }
   
   .heading span{
-    color:gold;
+    color:red;
   }
 
   .speciality {
