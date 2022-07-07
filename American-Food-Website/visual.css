@@ -1,1 +1,45 @@
 @import url(components.css);
+
+.logo {
+    height: 90px;
+    cursor: pointer;
+}
+
+#fav-btn{
+    position: relative;
+}
+
+#fav-btn span {
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    bottom: 0;
+    right: 0;
+}
+
+#cart-btn {
+    position: relative;
+}
+
+#cart-btn span {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    bottom: 0;
+    right: 0;
+}
+
