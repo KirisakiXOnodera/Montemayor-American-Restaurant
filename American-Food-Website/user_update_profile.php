@@ -4,9 +4,9 @@
 
 session_start();
 
-$admin_id = $_SESSION['admin_id'];
+$user_id = $_SESSION['user_id'];
 
-if(!isset($admin_id)){
+if(!isset($user_id)){
    header('location:login.php');
 };
 
@@ -18,7 +18,7 @@ if(isset($_POST['update_profile'])){
    $email = filter_var($email, FILTER_SANITIZE_STRING);
 
    $update_profile = $conn->prepare("UPDATE `users` SET name = ?, email = ? WHERE id = ?");
-   $update_profile->execute([$name, $email, $admin_id]);
+   $update_profile->execute([$name, $email, $user_id]);
 
    $image = $_FILES['image']['name'];
    $image = filter_var($image, FILTER_SANITIZE_STRING);
@@ -32,7 +32,7 @@ if(isset($_POST['update_profile'])){
          $message[] = 'image size is too large!';
       }else{
          $update_image = $conn->prepare("UPDATE `users` SET image = ? WHERE id = ?");
-         $update_image->execute([$image, $admin_id]);
+         $update_image->execute([$image, $user_id]);
          if($update_image){
             move_uploaded_file($image_tmp_name, $image_folder);
             unlink('uploaded_img/'.$old_image);
@@ -51,12 +51,12 @@ if(isset($_POST['update_profile'])){
 
    if(!empty($update_pass) AND !empty($new_pass) AND !empty($confirm_pass)){
       if($update_pass != $old_pass){
-        $message[] = 'Change successful!';  
+        $message[] = 'Change Successful!';  
       }elseif($new_pass != $confirm_pass){
          $message[] = 'Confirm password not matched!';
       }else{
          $update_pass_query = $conn->prepare("UPDATE `users` SET password = ? WHERE id = ?");
-         $update_pass_query->execute([$confirm_pass, $admin_id]);
+         $update_pass_query->execute([$confirm_pass, $user_id]);
          $message[] = 'Password updated successfully!';
       }
    }
@@ -74,7 +74,7 @@ if(isset($_POST['update_profile'])){
     <link rel="icon" href="icon/logo.png" type="image/x-icon">
     <title>Profile Update</title>
 
-    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="visual.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -83,14 +83,16 @@ if(isset($_POST['update_profile'])){
 <body class="update-profile-bg">
 
 
-<?php include 'admin_header.php';?>
+<?php include 'header.php';?>
+
+
     <section class="update-profile">
 
-    <h1 class="title">UPDATE PROFILE</h1>
+    <h1 class="user-title">UPDATE PROFILE</h1>
 
     <?php
             $select_profile = $conn->prepare("SELECT * FROM `users` WHERE id = ?");
-            $select_profile->execute([$admin_id]);
+            $select_profile->execute([$user_id]);
             $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
     ?>
 
@@ -121,7 +123,7 @@ if(isset($_POST['update_profile'])){
 
         <div class="flex-btn">
             <input type="submit" class="update-btn" value="Update Profile" name="update_profile">
-            <a href="admin_page.php" class="option-btn">Return to Admin</a>
+            <a href="home.php" class="option-btn">Go back</a>
         </div>
 
 

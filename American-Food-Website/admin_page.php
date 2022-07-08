@@ -31,7 +31,109 @@ if(!isset($admin_id)){
 
 
 <?php include 'admin_header.php';?>
-    
+
+    <section class="dashboard">
+        <h1 class="title">DASHBOARD</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+            <?php
+                $total_pendings = 0;
+                $select_pendings = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
+                $select_pendings->execute(['pending']);
+                while($fetch_pendings = $select_pendings->fetch(PDO::FETCH_ASSOC)){
+                $total_pendings += $fetch_pendings['total_price'];
+                };
+            ?>
+            <h3>₱<?= $total_pendings; ?></h3>
+            <p>Total Pendings</p>
+            <a href="admin_orders.php" class="admin-btn">see orders</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $total_pendings = 0;
+                $select_pendings = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
+                $select_pendings->execute(['pending']);
+                while($fetch_pendings = $select_pendings->fetch(PDO::FETCH_ASSOC)){
+                $total_pendings += $fetch_pendings['total_price'];
+                };
+            ?>
+            <h3>₱<?= $total_pendings; ?></h3>
+            <p>Completed Orders</p>
+            <a href="admin_orders.php" class="admin-btn">see orders</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $select_orders = $conn->prepare("SELECT * FROM `orders`");
+                $select_orders->execute();
+                $number_of_orders = $select_orders->rowCount();
+            ?>
+            <h3><?= $number_of_orders; ?></h3>
+            <p>Orders Placed</p>
+            <a href="admin_orders.php" class="admin-btn">see orders</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $select_products = $conn->prepare("SELECT * FROM `products`");
+                $select_products->execute();
+                $number_of_products = $select_products->rowCount();
+            ?>
+            <h3><?= $number_of_products; ?></h3>
+            <p>Products Added</p>
+            <a href="admin_products.php" class="admin-btn">see products</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $select_users = $conn->prepare("SELECT * FROM `users` WHERE user_type = ?");
+                $select_users->execute(['user']);
+                $number_of_users = $select_users->rowCount();
+            ?>
+            <h3><?= $number_of_users; ?></h3>
+            <p>Total Users</p>
+            <a href="admin_users.php" class="admin-btn">see accounts</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $select_admins = $conn->prepare("SELECT * FROM `users` WHERE user_type = ?");
+                $select_admins->execute(['admin']);
+                $number_of_admins = $select_admins->rowCount();
+            ?>
+            <h3><?= $number_of_admins; ?></h3>
+            <p>Total Admins</p>
+            <a href="admin_users.php" class="admin-btn">see accounts</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $select_accounts = $conn->prepare("SELECT * FROM `users`");
+                $select_accounts->execute();
+                $number_of_accounts = $select_accounts->rowCount();
+            ?>
+            <h3><?= $number_of_accounts; ?></h3>
+            <p>Total Accounts</p>
+            <a href="admin_users.php" class="admin-btn">see accounts</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $select_messages = $conn->prepare("SELECT * FROM `message`");
+                $select_messages->execute();
+                $number_of_messages = $select_messages->rowCount();
+            ?>
+            <h3><?= $number_of_messages; ?></h3>
+            <p>Total Messages</p>
+            <a href="admin_contacts.php" class="admin-btn">see messages</a>
+            </div>
+
+        </div>
+
+    </section>    
 
 
 

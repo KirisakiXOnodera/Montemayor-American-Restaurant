@@ -50,11 +50,11 @@ if(isset($message)){
 
         <img class="profile-icon" src="uploaded_img/<?= $fetch_profile['image']; ?>" alt="">
         <p><?= $fetch_profile['name']; ?></p>
-        <a href="admin_update_profile.php" class="update-btn">Update Profile</a>
+        <a href="user_update_profile.php" class="update-btn">Update Profile</a>
         <a href="logout.php" class="delete-btn">Logout</a>
         <div class="flex-btn">
-            <a href="login.php" class="option-btn">Login</a>
-            <a href="register.php" class="option-btn">Register</a>
+            <a href="login.php" class="admin-btn">Login</a>
+            <a href="register.php" class="admin-btn">Register</a>
         </div>
 
 

@@ -31,6 +31,8 @@ if(!isset($user_id)){
   <?php include 'header.php' ?>
 
 
+
+  <?php include 'footer.php' ?>
   <script src="script.js"></script>
 
 

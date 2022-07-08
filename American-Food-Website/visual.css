@@ -1,5 +1,15 @@
 @import url(components.css);
 
+
+.user-title{
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 2rem;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
 .logo {
     height: 90px;
     cursor: pointer;
@@ -42,4 +52,32 @@
     bottom: 0;
     right: 0;
 }
+
+
+/* Footer */
+.logofooter {
+    width: 200px;
+    padding-right: 75px;
+  }
+
+  .margin {
+    margin-top: 200px;
+    position: fixed;
+    right: 0; left: 0; bottom: 0px;
+  }
+
+  .footer-paragraph {
+    font-size: 1.5rem;
+  }
+
+/* End of Footer */
+
+
+@media (max-width: 991px) {
+  .logofooter {
+    width: 250px;
+    margin-left: 70px;
+    }
+}
+
 
