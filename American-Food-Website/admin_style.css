@@ -18,7 +18,7 @@ section {
     text-align: center;
     border:var(--border);
     box-shadow: var(--box-shadow);
-    background-color: #98FB98;
+    background-color: #e7feff;
     border-radius: 1rem;
  }
  
@@ -101,8 +101,16 @@ section {
     border-radius: .5rem;
     padding:2rem;
     position: relative;
+    
  }
  
+ .show-products .box-container .box:hover {
+    box-shadow: -5px 32px 54px -21px rgba(0,0,0,0.63);
+    -webkit-box-shadow: -5px 32px 54px -21px rgba(0,0,0,0.63);
+    -moz-box-shadow: -5px 32px 54px -21px rgba(0,0,0,0.63);
+ }
+
+
  .show-products .box-container .box .price{
     position: absolute;
     top:1rem; left:1rem;
@@ -138,6 +146,20 @@ section {
     color:var(--light-color);
  }
 
+ .empty {
+    font-size: 2rem;
+    color: green;
+    display: inline-block;
+    max-width: 50rem;
+    padding:2rem;
+    margin:0 auto;
+    text-align: center;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background-color: #e7feff;
+    border-radius: .5rem;
+ }
+
  
 .update-product form{
     max-width: 50rem;
@@ -160,15 +182,113 @@ section {
  .update-product form .box{
     width: 100%;
     border:var(--border);
-    background-color: var(--white);
+    background-color: #e7feff;
     border-radius: .5rem;
-    background-color: var(--light-bg);
     padding:1.2rem 1.4rem;
     font-size: 1.8rem;
     color:var(--black);
     margin:1rem 0;
  }
 
+ .placed-orders .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content:center;
+ }
+ 
+ .placed-orders .box-container .box{
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background-color: #e7feff;
+    border-radius: .5rem;
+    padding:2rem;
+ }
+ 
+ .placed-orders .box-container .box p{
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .placed-orders .box-container .box p span{
+    color:var(--green);
+ }
+ 
+ .placed-orders .box-container .box .drop-down{
+    width: 100%;
+    padding:1.2rem 1.4rem;
+    font-size: 1.8rem;
+    border:var(--border);
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    margin-bottom: .5rem;
+ }
+ 
+ .user-accounts .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content:center;
+ }
+ 
+ .user-accounts .box-container .box{
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background-color: #e7feff;
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+ }
+ 
+ .user-accounts .box-container .box img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+ }
+ 
+ .user-accounts .box-container .box p{
+    line-height: 1.5;
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .user-accounts .box-container .box p span{
+    color:var(--green);
+ }
+ 
+ .messages .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content:center;
+ }
+ 
+ .messages .box-container .box{
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background-color: #e7feff;
+    border-radius: .5rem;
+    padding:2rem;
+ }
+ 
+ .messages .box-container .box p{
+    line-height: 1.5;
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .messages .box-container .box p span{
+    color:var(--green);
+ }
 
 
 

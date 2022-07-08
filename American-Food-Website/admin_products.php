@@ -134,9 +134,9 @@ if(isset($_POST['add_product'])){
    <div class="box">
       <div class="price">₱<?= $fetch_products['price']; ?></div>
       <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
-      <div class="name"><?= $fetch_products['name']; ?></div>
-      <div class="cat"><?= $fetch_products['category']; ?></div>
-      <div class="details"><?= $fetch_products['details']; ?></div>
+      <div class="name"><strong>Name:</strong> <?= $fetch_products['name']; ?></div>
+      <div class="cat"><strong>Category:</strong> <?= $fetch_products['category']; ?></div>
+      <div class="details"><strong>Details:</strong> <?= $fetch_products['details']; ?></div>
       <div class="flex-btn">
          <a href="admin_update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">update</a>
          <a href="admin_products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>

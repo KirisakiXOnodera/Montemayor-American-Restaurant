@@ -42,12 +42,10 @@ if(!isset($admin_id)){
                 $total_pendings = 0;
                 $select_pendings = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
                 $select_pendings->execute(['pending']);
-                while($fetch_pendings = $select_pendings->fetch(PDO::FETCH_ASSOC)){
-                $total_pendings += $fetch_pendings['total_price'];
-                };
+                $number_of_pendings = $select_pendings->rowCount();
             ?>
-            <h3>₱<?= $total_pendings; ?></h3>
-            <p>Total Pendings</p>
+            <h3><?=$number_of_pendings; ?></h3>
+            <p>Pending Orders</p>
             <a href="admin_orders.php" class="admin-btn">see orders</a>
             </div>
 
@@ -61,7 +59,33 @@ if(!isset($admin_id)){
                 };
             ?>
             <h3>₱<?= $total_pendings; ?></h3>
+            <p>Total Amount of Pending Order</p>
+            <a href="admin_orders.php" class="admin-btn">see orders</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $total_completed = 0;
+                $select_completed = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
+                $select_completed->execute(['completed']);
+                $number_of_completed = $select_completed->rowCount();
+            ?>
+            <h3><?= $number_of_completed; ?></h3>
             <p>Completed Orders</p>
+            <a href="admin_orders.php" class="admin-btn">see orders</a>
+            </div>
+
+            <div class="box">
+            <?php
+                $total_completed = 0;
+                $select_completed = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
+                $select_completed->execute(['completed']);
+                while($fetch_completed = $select_completed->fetch(PDO::FETCH_ASSOC)){
+                $total_completed += $fetch_completed['total_price'];
+                };
+            ?>
+            <h3>₱<?= $total_completed; ?></h3>
+            <p>Total Amount of Complete Order</p>
             <a href="admin_orders.php" class="admin-btn">see orders</a>
             </div>
 
@@ -85,28 +109,6 @@ if(!isset($admin_id)){
             <h3><?= $number_of_products; ?></h3>
             <p>Products Added</p>
             <a href="admin_products.php" class="admin-btn">see products</a>
-            </div>
-
-            <div class="box">
-            <?php
-                $select_users = $conn->prepare("SELECT * FROM `users` WHERE user_type = ?");
-                $select_users->execute(['user']);
-                $number_of_users = $select_users->rowCount();
-            ?>
-            <h3><?= $number_of_users; ?></h3>
-            <p>Total Users</p>
-            <a href="admin_users.php" class="admin-btn">see accounts</a>
-            </div>
-
-            <div class="box">
-            <?php
-                $select_admins = $conn->prepare("SELECT * FROM `users` WHERE user_type = ?");
-                $select_admins->execute(['admin']);
-                $number_of_admins = $select_admins->rowCount();
-            ?>
-            <h3><?= $number_of_admins; ?></h3>
-            <p>Total Admins</p>
-            <a href="admin_users.php" class="admin-btn">see accounts</a>
             </div>
 
             <div class="box">
