@@ -30,6 +30,62 @@ if(!isset($user_id)){
 <body>
   <?php include 'header.php' ?>
 
+  <!--BLOG-->
+  <section id="blog">
+    <div class="blog-heading">
+      <span>Recent Posts</span>
+      <h3>MONTEMAYOR BLOG</h3>
+    </div>
+
+     <!--Box 1-->
+    <div class="blog-container">
+      <div class="blog-box">
+        <div class="blog-img">
+          <img src="food_photos/banana-split/banana-split5.jpg" alt="">
+        </div>
+
+        <div class="blog-text">
+          <span>18 July 2022 / Food Review</span>
+          <a href="" class="blog-title">Montemayor is the best newly opened restaurant in Metro Manila!</a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ab eius sint doloremque, non laudantium earum fuga minima veniam amet aperiam?</p>
+          <a href="" class="blog-extension">Read More</a>
+        </div>
+      </div>
+
+      <!--Box 2-->
+      <div class="blog-box">
+        <div class="blog-img">
+          <img src="food_photos/apple-pie/apple-pie3.jpg" alt="">
+        </div>
+
+        <div class="blog-text">
+          <span>30 June 2022 / Food Review</span>
+          <a href="" class="blog-title">Montemayor is the best newly opened restaurant in Metro Manila!</a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ab eius sint doloremque, non laudantium earum fuga minima veniam amet aperiam?</p>
+          <a href="" class="blog-extension">Read More</a>
+        </div>
+      </div>
+
+      <!--Box 3-->
+      <div class="blog-box">
+        <div class="blog-img">
+          <img src="food_photos/macaroni-and-cheese/mac4.webp" alt="">
+        </div>
+
+        <div class="blog-text">
+          <span>1 July 2022 / Food Review</span>
+          <a href="" class="blog-title">Montemayor is the best newly opened restaurant in Metro Manila!</a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ab eius sint doloremque, non laudantium earum fuga minima veniam amet aperiam?</p>
+          <a href=""  class="blog-extension">Read More</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--BLOG END-->
+
 
 
   <?php include 'footer.php' ?>

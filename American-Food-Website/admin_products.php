@@ -79,7 +79,7 @@ if(isset($_POST['add_product'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon/logo.png" type="image/x-icon">
-    <title>Admin Product</title>
+    <title>Products</title>
 
     <link rel="stylesheet" href="admin_style.css">
 
@@ -103,7 +103,7 @@ if(isset($_POST['add_product'])){
                     <option value="" selected disabled>select category</option>
                     <option value="Dessert">Dessert</option>
                     <option value="Snack">Snack</option>
-                    <option value="Family Meal">Family Meal</option>
+                    <option value="Meal">Meal</option>
                     <option value="Salad">Salad</option>
                 </select>
             </div>

@@ -91,22 +91,26 @@
         </div>
       </div>
       <div class="contactform">
-        <form>
+        <form action="" method="POST">
           <h2 class="header2">Send Message</h2>
           <div class="inputbox">
-            <input type="text" name="" required="required">
+            <input type="text" name="name" required="required">
             <span>Full Name</span>
           </div>
           <div class="inputbox">
-            <input type="text" name="" required="required">
+            <input type="text" name="email" required="required">
             <span>Email</span>
           </div>
           <div class="inputbox">
-            <textarea required="required"></textarea>
+            <input type="number" name="number" min="0" required="required">
+            <span>Number</span>
+          </div>
+          <div class="inputbox">
+            <textarea name="msg" required="required"></textarea>
             <span>Type your Message...</span>
           </div>
           <div class="inputbox">
-            <input type="submit" name="" value="Send">
+            <input type="submit" name="send" value="Send">
           </div>
         </form>
       </div>

@@ -60,7 +60,6 @@ if(!isset($admin_id)){
             ?>
             <h3>₱<?= $total_pendings; ?></h3>
             <p>Total Amount of Pending Order</p>
-            <a href="admin_orders.php" class="admin-btn">see orders</a>
             </div>
 
             <div class="box">
@@ -86,7 +85,6 @@ if(!isset($admin_id)){
             ?>
             <h3>₱<?= $total_completed; ?></h3>
             <p>Total Amount of Complete Order</p>
-            <a href="admin_orders.php" class="admin-btn">see orders</a>
             </div>
 
             <div class="box">

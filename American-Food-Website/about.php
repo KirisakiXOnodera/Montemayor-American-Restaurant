@@ -29,6 +29,40 @@ if(!isset($user_id)){
 </head>
 <body>
   <?php include 'header.php' ?>
+   <!--ABOUT-->
+
+    <section class="about-bg">
+   <section id="about1">
+    <div class="about1-heading">
+      <h3>OWNERS/DEVELOPERS</h3>
+    </div>
+    </section>
+  <section class="person1-about">
+    <div class="main">
+      <img src="about-picture/dom.jpg">
+      <div class="person1-about-text">
+        <h2>Dominique R. Libardo</h2>
+        <h5>Developer <span>& Designer</span></h5>
+        <p>I am a front-end web developer. I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.A responsive design makes your website accessible to all users, regardless of their device.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="person1-about">
+    <div class="main">
+      <img src="about-picture/jear.jpg">
+      <div class="person1-about-text">
+        <h2>John Rey P. Francisco</h2>
+        <h5>Developer <span>& Designer</span></h5>
+        <p>I am a front-end web developer. I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.A responsive design makes your website accessible to all users, regardless of their device.</p>
+      </div>
+    </div>
+  </section>
+  </section>
+
+
+  <!--ABOUT END-->
+
 
 
 

@@ -51,7 +51,8 @@ html {
 .delete-btn,
 .option-btn,
 .update-btn,
-.admin-btn {
+.admin-btn,
+.shop-btn {
   display: block;
   width: 100%;
   margin-top: 1rem;
@@ -91,11 +92,17 @@ html {
   text-decoration: none;
 }
 
+.shop-btn {
+  background-color: yellowgreen;
+  text-decoration: none;
+}
+
 .form-container form .btn:hover,
 .delete-btn:hover,
 .option-btn:hover,
 .update-btn:hover,
-.admin-btn:hover {
+.admin-btn:hover,
+.shop-btn:hover {
   opacity: 0.8;
   color: var(--white);
 
@@ -104,7 +111,8 @@ html {
 .delete-btn:active,
 .option-btn:active,
 .update-btn:active,
-.admin-btn:active {
+.admin-btn:active,
+.shop-btn:active {
   box-shadow: 0 0 2px darkslategray;
   transform: translateY(2px);
 }
@@ -121,22 +129,37 @@ html {
 
 .title {
   text-align: center;
-  margin-top: 12rem;
+  margin-top: 15rem;
   margin-bottom: 2rem;
   color: var(--black);
   font-weight: 700;
   font-size: 3.5rem;
 }
 
+.empty {
+  font-size: 2rem;
+  color: black;
+  display: inline-block;
+  max-width: 50rem;
+  padding:4rem;
+  margin:0 auto;
+  text-align: center;
+  border:var(--border);
+  box-shadow: var(--box-shadow);
+  background-color: #e7feff;
+  border-radius: .5rem;
+}
+
 
 
 .message {
-  position: fixed;
+  position: absolute;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  top: 0;
   max-width: 1200px;
   margin: 0 auto;
   background-color: var(--light-bg);
@@ -265,8 +288,8 @@ html {
   top: 0; left: 0; right: 0;
   z-index: 1000;
   box-shadow: 0px 5px  10px rgba(0,0,0,0.3);
-  opacity: 1;
   position: fixed;
+  opacity: 1;
 }
 
 .admin-header .admin-flex {
@@ -308,7 +331,7 @@ html {
   color: var(--black);
   cursor: pointer;
   margin-left: 1.5rem;
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 0 7px;
   transition: 0.3s ease;
 

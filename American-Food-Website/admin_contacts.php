@@ -27,7 +27,8 @@ if(isset($_GET['delete'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>messages</title>
+   <title>Messages</title>
+   <link rel="icon" href="icon/logo.png" type="image/x-icon">
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -42,7 +43,7 @@ if(isset($_GET['delete'])){
 
 <section class="messages">
 
-   <h1 class="title">messages</h1>
+   <h1 class="title">MESSAGES</h1>
 
    <div class="box-container">
 

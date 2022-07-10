@@ -146,19 +146,6 @@ section {
     color:var(--light-color);
  }
 
- .empty {
-    font-size: 2rem;
-    color: green;
-    display: inline-block;
-    max-width: 50rem;
-    padding:2rem;
-    margin:0 auto;
-    text-align: center;
-    border:var(--border);
-    box-shadow: var(--box-shadow);
-    background-color: #e7feff;
-    border-radius: .5rem;
- }
 
  
 .update-product form{
@@ -250,6 +237,7 @@ section {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
+    border: 3px solid black;
  }
  
  .user-accounts .box-container .box p{

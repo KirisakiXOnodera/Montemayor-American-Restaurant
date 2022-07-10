@@ -31,14 +31,16 @@ if(isset($message)){
     <div class="admin-icon">
         <div id="menu-btn" class="fas fa-bars"></div>
         <div id="user-btn" class="fas fa-user"></div>
-        <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
-        <div id="fav-btn" class="fa-solid fa-heart">
-        <div><span class="fav-counter">3</span></div>
-        </div>
-        <div id="cart-btn" class="fa-solid fa-cart-shopping">
-        <div><span class="counter-counter">3</span></div>
-        </div>
-    </div>
+       
+        <a href="search_page.php"><div id="search-btn" class="fa-solid fa-magnifying-glass"></div></a>
+        <?php
+            $count_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+            $count_cart_items->execute([$user_id]);
+            $count_wishlist_items = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
+            $count_wishlist_items->execute([$user_id]);
+         ?>
+        <a href="wishlist.php"><div id="fav-btn" class="fa-solid fa-heart"><div><span class="fav-counter"><?= $count_wishlist_items->rowCount(); ?></span></div></div></a> 
+        <a href="cart.php"><div id="cart-btn" class="fa-solid fa-cart-shopping"><div><span class="counter-counter"><?= $count_cart_items->rowCount(); ?></span></div></div></a>
 
 
     <div class="profile">
@@ -52,11 +54,6 @@ if(isset($message)){
         <p><?= $fetch_profile['name']; ?></p>
         <a href="user_update_profile.php" class="update-btn">Update Profile</a>
         <a href="logout.php" class="delete-btn">Logout</a>
-        <div class="flex-btn">
-            <a href="login.php" class="admin-btn">Login</a>
-            <a href="register.php" class="admin-btn">Register</a>
-        </div>
-
 
     </div>
 
