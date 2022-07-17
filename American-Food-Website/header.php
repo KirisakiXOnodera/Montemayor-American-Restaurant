@@ -17,7 +17,7 @@ if(isset($message)){
 <header class="admin-header">
 
     <div class="admin-flex fixed-top">
-      <a href="home.php"><img class="logo" src="icon/logo.png"></a>
+      <a href="index.php"><img class="logo" src="icon/logo.png"></a>
 
     <nav class="adminnavbar">
         <a href="index.php">HOME</a>

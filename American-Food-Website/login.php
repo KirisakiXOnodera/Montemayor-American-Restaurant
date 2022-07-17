@@ -26,7 +26,7 @@
             }elseif($row['user_type'] == 'user'){
 
                 $_SESSION['user_id'] = $row['id'];
-                header('location:login.php');
+                header('location:index.php');
 
             }else{
                 $message[] = 'No user found!';
