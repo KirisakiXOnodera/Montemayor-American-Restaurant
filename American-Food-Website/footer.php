@@ -22,7 +22,7 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold text-white footer-paragraph">Navigation</h6>
             <p class="footer-paragraph">
-              <a class="text-white text-decoration-none" href="home.php">Home</a>
+              <a class="text-white text-decoration-none" href="index.php">Home</a>
             </p>
             <p class="footer-paragraph">
               <a class="text-white text-decoration-none" href="menu.php">Menu</a>
