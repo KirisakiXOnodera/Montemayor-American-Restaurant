@@ -59,7 +59,7 @@ if(isset($_POST['send'])){
 
   <section class="contact">
     <div class="content">
-      <h2 class="header2">Contact Us</h2>
+      <h2 class="header2">CONTACT US</h2>
       <p class="pdesign">Have any questions? Send us a message!</p>
     </div>
     <div class="container1">
@@ -112,8 +112,6 @@ if(isset($_POST['send'])){
       </div>
     </div>
   </section>
-
-
 
   <?php include 'footer.php' ?>
   <script src="script.js"></script>

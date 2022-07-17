@@ -52,31 +52,39 @@ if(!isset($user_id)){
 <div class="box-container">
 
    <div class="box">
-      <img src="food_photos/banana-split/banana-split1.jpeg" alt="">
+      <img src="category_photo/banana-split1.jpeg" alt="">
       <h3>Dessert</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
+      <p>The most sweet food to compensates for low blood sugar. </p>
+      <div class="home-padding">
       <a href="category.php?category=Dessert" class="shop-btn">Dessert</a>
+      </div>
    </div>
 
    <div class="box">
-      <img src="food_photos/cheeseburger/cheeseburger1.jpg" alt="">
+      <img src="category_photo/cheeseburger1.jpg" alt="">
       <h3>Snack</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
+      <p>The food you can eat on the go, anytime, anywhere</p>
+      <div class="home-padding">
       <a href="category.php?category=Snack" class="shop-btn">Snack</a>
+      </div>
    </div>
 
    <div class="box">
-      <img src="food_photos/barbecue-ribs/bbqribs2.jpg" alt="">
+      <img src="category_photo/bbqribs2.jpg" alt="">
       <h3>Meal</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
+      <p>Big portioned serving that you can share with friends and family</p>
+      <div class="home-padding">
       <a href="category.php?category=Meal" class="shop-btn">Meal</a>
+      </div>
    </div>
 
    <div class="box">
-      <img src="food_photos/california-avocado-salad/avocadosalad1.jpg" alt="">
+      <img src="category_photo/avocadosalad1.jpg" alt="">
       <h3>Salad</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
+      <p>Mixtures of vegetables or fruits with different dressing</p>
+      <div class="home-padding">
       <a href="category.php?category=Salad" class="shop-btn">Salad</a>
+      </div>
    </div>
 
 </div>
@@ -97,7 +105,7 @@ if(!isset($user_id)){
               <div class="content">
                   <img src="specialty-icon/specialty-icon-1.png" alt="">
                   <h3 class="header3">Cheeseburger</h3>
-                  <p>A huge cheeseburger with all the fixings, cheese, lettuce, tomato, onions and special sauce or mayonnaise.</p>
+                  <p>A huge cheeseburger with all the fixings, cheese, lettuce, tomato, onions, special sauce, big beef patty between crispy bun.</p>
               </div>
           </div>
           <div class="box">

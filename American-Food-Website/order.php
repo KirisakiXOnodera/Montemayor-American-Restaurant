@@ -31,6 +31,41 @@ if(!isset($user_id)){
   <?php include 'header.php' ?>
 
 
+  <section class="placed-orders">
+
+  <h1 class="title">ORDER</h1>
+
+   <div class="box-container">
+
+   <?php
+      $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ?");
+      $select_orders->execute([$user_id]);
+      if($select_orders->rowCount() > 0){
+         while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){ 
+   ?>
+   <div class="box">
+      <p> <strong>Placed on :</strong><span><?= $fetch_orders['placed_on']; ?></span> </p>
+      <p> <strong>Name : </strong><span><?= $fetch_orders['name']; ?></span> </p>
+      <p> <strong>Number : </strong><span><?= $fetch_orders['number']; ?></span> </p>
+      <p> <strong>Email : </strong><span><?= $fetch_orders['email']; ?></span> </p>
+      <p> <strong>Address : </strong><span><?= $fetch_orders['address']; ?></span> </p>
+      <p> <strong>Payment method : </strong><span><?= $fetch_orders['method']; ?></span> </p>
+      <p> <strong>Orders : </strong><span><?= $fetch_orders['total_products']; ?></span> </p>
+      <p> <strong>Total price : </strong><span>₱<?= $fetch_orders['total_price'] + 50; ?></span> </p>
+      <p> <strong>Order status : </strong><span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
+   </div>
+   <?php
+      }
+   }else{
+      echo '<p class="empty">No orders placed yet!</p>';
+   }
+   ?>
+
+   </div>
+
+   </section>
+
+
 
   <?php include 'footer.php' ?>
   <script src="script.js"></script>

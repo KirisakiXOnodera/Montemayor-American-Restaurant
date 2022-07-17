@@ -72,7 +72,7 @@ if(isset($_GET['delete'])){
          <p> <strong>Number : </strong><span><?= $fetch_orders['number']; ?></span> </p>
          <p> <strong>Address : </strong><span><?= $fetch_orders['address']; ?></span> </p>
          <p> <strong>Total products : </strong><span><?= $fetch_orders['total_products']; ?></span> </p>
-         <p> <strong>Total price : </strong><span>₱<?= $fetch_orders['total_price']; ?></span> </p>
+         <p> <strong>Total price : </strong><span>₱<?= $fetch_orders['total_price'] + 50; ?></span> </p>
          <p> <strong>Payment method : </strong><span><?= $fetch_orders['method']; ?></span> </p>
          <form action="" method="POST">
             <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">

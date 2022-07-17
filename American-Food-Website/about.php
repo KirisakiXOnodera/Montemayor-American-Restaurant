@@ -34,7 +34,7 @@ if(!isset($user_id)){
     <section class="about-bg">
    <section id="about1">
     <div class="about1-heading">
-      <h3>OWNERS/DEVELOPERS</h3>
+      <h1 class="header1">OWNERS/DEVELOPERS</h1>
     </div>
     </section>
   <section class="person1-about">

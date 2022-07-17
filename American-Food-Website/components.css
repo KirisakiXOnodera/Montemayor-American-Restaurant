@@ -93,7 +93,7 @@ html {
 }
 
 .shop-btn {
-  background-color: yellowgreen;
+  background-color: gold;
   text-decoration: none;
 }
 
@@ -148,6 +148,7 @@ html {
   box-shadow: var(--box-shadow);
   background-color: #e7feff;
   border-radius: .5rem;
+  margin-bottom: 150px;
 }
 
 

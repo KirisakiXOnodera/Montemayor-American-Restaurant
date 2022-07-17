@@ -29,7 +29,7 @@ if(isset($_GET['delete'])){
     $p_qty = filter_var($p_qty, FILTER_SANITIZE_STRING);
     $update_qty = $conn->prepare("UPDATE `cart` SET quantity = ? WHERE id = ?");
     $update_qty->execute([$p_qty, $cart_id]);
-    $message[] = 'cart quantity updated';
+    $message[] = 'Cart quantity updated';
  }
 
 ?>
@@ -51,6 +51,62 @@ if(isset($_GET['delete'])){
 </head>
 <body>
   <?php include 'header.php' ?>
+  
+  <section class="shopping-cart">
+
+   <h1 class="title">THE <span>CART</span></h1>
+
+   <div class="box-container">
+
+   <?php
+      $grand_total = 0;
+      $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+      $select_cart->execute([$user_id]);
+      if($select_cart->rowCount() > 0){
+         while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){ 
+   ?>
+   <form action="" method="POST" class="box">
+      <a href="cart.php?delete=<?= $fetch_cart['id']; ?>" class="fas fa-times" onclick="return confirm('delete this from cart?');"></a>
+      <a href="view_page.php?pid=<?= $fetch_cart['pid']; ?>" class="fas fa-eye"></a>
+      <img class="cart-photo" src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
+      <div class="name"><?= $fetch_cart['name']; ?></div>
+      <div class="price">₱<?= $fetch_cart['price']; ?></div>
+      <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
+      <div class="flex-btn buttton-padding">
+         <input type="number" min="1" value="<?= $fetch_cart['quantity']; ?>" class="qty" name="p_qty">
+         <input type="submit" value="update" name="update_qty" class="option-btn">
+      </div>
+      <div class="sub-total"> Sub total : <span>₱<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></span> </div>
+   </form>
+   <?php
+      $grand_total += $sub_total;
+      }
+   }else{
+      echo '<p class="empty">The cart is empty</p>';
+   }
+   ?>
+   </div>
+
+   <div class="cart-total">
+      <p>Total:  <span>₱<?=($grand_total); ?></span></p>
+      <?php
+         if(empty($grand_total)){
+            $delfee = 0;
+         }else{
+            $delfee = 50;
+         }
+      ?>
+      <p>Delivery Fee: <span>₱<?=$delfee; ?></span></p>
+      <p> <strong>Grand total :</strong> <span class="grand-price">₱<?=($delfee + $grand_total); ?></span></p>
+      <a href="shop.php" class="option-btn">Continue shopping</a>
+      <a href="cart.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>">Delete all</a>
+      <a href="checkout.php" class="admin-btn <?= ($grand_total > 1)?'':'disabled'; ?>">Proceed to checkout</a>
+   </div>
+
+</section>
+
+
+
 
 
 
